@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sastha Maal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: silver;
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .menu-item {
+            background: silver;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .popup img {
+            width: 200px;
+            height: 200px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .container {
+            text-align: center; /* center the child */
+        }
+        p {
+            display: inline-flex; /* keep the background color wrapped tight */
+            padding:5px;font-size:20px;background-color:green;color:#ffffff;
+        }
+        body {
+            background-image: url('https://wallpaperaccess.com/full/5000242.jpg');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Bouquet Shop</h1>
+    </header>
+    <br><br><br><br><br><br><br>
+    <div class="menu">
+        <div class="menu-item" onclick="openBouquetDetail('file:///C:/Users/h_san/OneDrive/Desktop/5pcs.html')">
+            <img src="C:\Users\h_san\Downloads\WhatsApp Image 2025-02-01 at 6.02.29 PM.jpeg" alt="Item 1" onclick="showPopup('')">
+            <h3>Harry Potter Kinderjoy Bouquet(5Pcs)</h3>
+            <p class="container">Rs.1200</p>
+        </div>
+        <div class="menu-item" onclick="openBouquetDetail('file:///C:/Users/h_san/OneDrive/Desktop/3pcs.html')">
+            <img src="C:\Users\h_san\Downloads\WhatsApp Image 2025-02-01 at 6.02.29 PM.jpeg" alt="Item 2" onclick="showPopup('')">
+            <h3>Harry Potter Kinderjoy Bouquet(3Pcs)</h3>
+            <p class="container">Rs.700</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <script>
+        function showPopup(image, text) {
+            document.getElementById('popup-img').src = image;
+            document.getElementById('popup-text').innerText = text;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+        function openBouquetDetail(page) {
+            window.location.href = page;
+        }
+    </script>
+    <footer id="footer">
+        <div style="background-color: silver;">
+        <div class="company-details">
+            <div class="row">
+                <center>
+                <div id="col1">
+                    <span id="icon" class="fa fa-map-marker"></span>
+    
+                    <span>
+                        710-B, Sattva Global Tech Park ,
+                        <br />Banglore-560060
+                    </span>
+                </div>
+    
+                <div id="col2">
+                    <span id="icon" class="fa fa-phone"></span>
+    
+                    <span>
+                        Telephone: +91-6361570084
+                    </span>
+                </div>
+    
+                <div id="col3">
+                    <span id="icon" class="fa fa-envelope"></span>
+                    <span>kailash9411@gmail.com</span>
+                </div>
+                </center>
+            </div>
+        </div>
+        <div class="copyright">
+            <center>
+                <h2>© All rights reserved | VeganParadise.</h2>
+            </center>
+            <ul class="contact">
+                <li>
+                    <a href="https://www.instagram.com/_kailash69/?igsh=MWNhbGR6aWo2MDJsdw%3D%3D" class="fa fa-twitter">Instagram</a><img src="instalogo.png"width="40" height="40"></a>
+                </li>
+                <br><br><br><br>
+            </ul>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
