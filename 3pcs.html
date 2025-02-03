@@ -56,6 +56,14 @@
         body {
             background-image: url('https://w0.peakpx.com/wallpaper/598/440/HD-wallpaper-love-is-in-the-air-love-theme.jpg');
         }
+         .original-price {
+            text-decoration: line-through; /* Strikes through the original price */
+            color: red; /* Changes the color of the original price to red */
+        }
+        .discounted-price {
+            font-weight: bold; /* Makes the discounted price bold */
+            color: green; /* Changes the color of the discounted price to green */
+        }
     </style>
 </head>
 <body>
@@ -73,7 +81,10 @@
             <button class="btn" id="nextBtn">➡</button>
         </div>
         <div class="buttons">
-            <h2>Rs.700</h2>
+            <p>
+               <span class="original-price">Rs.800</span> 
+               <span class="discounted-price">650</span> 
+            </p>
             <a href="img.html">
             <button class="btn" >Buy Now</button>
             </a>
@@ -131,6 +142,15 @@
     // Initialize the first image
     showImage(currentIndex);
 </script>
+     <script>
+        // This script can be used to dynamically update prices if needed
+        const originalPrice = 100.00;
+        const discount = 20.00;
+        const discountedPrice = originalPrice - discount;
+
+        document.querySelector('.original-price').textContent = $${originalPrice.toFixed(2)};
+        document.querySelector('.discounted-price').textContent = $${discountedPrice.toFixed(2)};
+    </script>
 <footer id="footer">
     <div style="background-color: #F4C2C2 ;">
     <div class="company-details">
